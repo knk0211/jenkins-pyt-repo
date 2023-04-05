@@ -27,7 +27,7 @@ pipeline {
       
      stage('push image artifact') {
        steps {
-         scripts{
+         script{
          sh '''
          echo 'pushing image'
          docker push nkunta504/jenkinscicd:${BUILD_NUMBER}
