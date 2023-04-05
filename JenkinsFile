@@ -39,8 +39,8 @@ pipeline {
      
      stage('cloning k8s repo'){
        steps{
-         git url 'https://github.com/knk0211/k8s-files.git',
-         branch 'main'
+         git url: 'https://github.com/knk0211/k8s-files.git',
+         branch: 'main'
       }
       }
 
