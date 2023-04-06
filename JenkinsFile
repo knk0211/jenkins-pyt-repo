@@ -48,7 +48,7 @@ pipeline {
 
      stage('update manifest files'){
        steps{
-         withCredentials([string(credentialsId: 'jenkins-github', variable: 'github')]) {
+         withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
          sh '''
          cat deployment.yaml
          sed -i "s/tag/${BUILD_NUMBER}/g" deployment.yaml
