@@ -36,8 +36,8 @@ pipeline {
       
          }
        }
-     
-     } 
+    
+      
      
      stage('cloning k8s repo'){
        steps{
