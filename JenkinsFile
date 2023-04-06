@@ -51,7 +51,7 @@ pipeline {
          withCredentials([string(credentialsId: 'jenkins-github', variable: 'github')]) {
          sh '''
          cat deployment.yaml
-         sed -i '' "s/tag/${BUILD_NUMBER}/g" deployment.yaml
+         sed -i "s/tag/${BUILD_NUMBER}/g" deployment.yaml
          cat deployment.yaml
          git add deployment.yaml
          git commit -m 'updated deployment yaml'
